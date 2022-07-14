@@ -11,6 +11,7 @@
 // 10. In signuproute.js, change param to params
 
 const express = require('express'); 
+const port = 3000;
 const path = require ('path'); 
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -69,6 +70,9 @@ app.get('/',function(req,res){
 
 
 
-app.listen(3000,()=>{
-    console.log("Server Ready on 3000");
-});
+// app.listen(3000,()=>{
+//     console.log("Server Ready on 3000");
+// });
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+  })
