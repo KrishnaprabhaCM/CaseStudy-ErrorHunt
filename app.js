@@ -1,20 +1,23 @@
-// 1. Change server.js to main.js
+// Part #1 Point 1. Change 'server.js' to 'app.js' in 'package.json'
 //    Install node modules
-// 2. Install and require body-parser
-// 3. Change filename homerouter.js to homeroute.js
-// 4. Change name in user.js  file
-// 5. Change port number
-// 6. Comment nav
-// 7. Require cors
-// 8. In addauthor.ejs there is spelling mistake
-// 9. 
-// 10. In signuproute.js, change param to params
+// Part #1 Point 2. Install and require body-parser
+// Part #1 Point 3. Change filename 'homerouter.js' to 'homeroute.js'
+// Part #1 Point 4. Change 'users' to 'user' in user.js  file
+// Part #1 Point 5. Change port number
+// Part #2 Point  6. Comment nav
+// Part #2 Point 7. Require cors
+// Part #2 Point 8. In 'addauthor.ejs', change 'images' to 'image'
+// Part #2 Point 9. 
+// Part #2 Point 10. In 'signuproute.js', change 'param' to 'params'
+
+
 require('dotenv').config()
 const express = require('express'); 
-const port = process.env.PORT || 3000;
 const path = require ('path'); 
-const cors = require('cors');
-const bodyParser = require('body-parser');
+const cors = require('cors'); // Part #2 Point 7. Require cors
+const bodyParser = require('body-parser'); // Part #1 Point 2. Install and require body-parser
+
+// Part #2 Point  6. Comment nav
 
 // const nav= [
 //     {
@@ -70,9 +73,6 @@ app.get('/',function(req,res){
 
 
 
-// app.listen(3000,()=>{
-//     console.log("Server Ready on 3000");
-// });
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-  })
+app.listen(3000,()=>{
+    console.log("Server Ready on 3000");// Part #1 Point 5. Change port number
+});
