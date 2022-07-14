@@ -14,6 +14,7 @@ const express = require('express');
 const path = require ('path'); 
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const port = 3000;
 
 // const nav= [
 //     {
