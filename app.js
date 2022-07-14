@@ -9,7 +9,7 @@
 // 8. In addauthor.ejs there is spelling mistake
 // 9. 
 // 10. In signuproute.js, change param to params
-
+require('dotenv').config()
 const express = require('express'); 
 const port = process.env.PORT || 3000;
 const path = require ('path'); 
