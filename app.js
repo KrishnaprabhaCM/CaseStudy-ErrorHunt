@@ -13,6 +13,7 @@
 
 require('dotenv').config()
 const express = require('express'); 
+const port = process.env.PORT || 3000;
 const path = require ('path'); 
 const cors = require('cors'); // Part #2 Point 7. Require cors
 const bodyParser = require('body-parser'); // Part #1 Point 2. Install and require body-parser
@@ -73,6 +74,9 @@ app.get('/',function(req,res){
 
 
 
-app.listen(3000,()=>{
-    console.log("Server Ready on 3000");// Part #1 Point 5. Change port number
-});
+// app.listen(3000,()=>{
+//     console.log("Server Ready on 3000");// Part #1 Point 5. Change port number
+// });
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+  })
