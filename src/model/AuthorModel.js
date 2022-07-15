@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI ||'mongodb+srv://Kp173:Kp173@cluster0.hwoma.mongodb.net/Library?retryWrites=true&w=majority');
+// url = mongoose.connect(process.env.MONGODB_URI || 'mongodb://:localhost27017/Library');
+let url = process.env.MONGODB_URI || 'mongodb://:localhost27017/Library';
+mongoose.connect(url, { useMongoClient: true });
 const Schema = mongoose.Schema;
 
 
